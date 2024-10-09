@@ -20,7 +20,7 @@ app.use(
 		genid: (req) => {
 			return uuidv4();
 		},
-		secret: "natsnatsnats",
+		secret: "arunnats",
 		resave: false,
 		saveUninitialized: true,
 		cookie: { secure: false },
@@ -39,7 +39,7 @@ function clearTempDirectory() {
 		fs.readdirSync(tempDir).forEach((file) => {
 			const filePath = path.join(tempDir, file);
 			if (fs.statSync(filePath).isDirectory()) {
-				fs.rmdirSync(filePath, { recursive: true });
+				fs.rmSync(filePath, { recursive: true });
 			}
 		});
 	}

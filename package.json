@@ -3,13 +3,18 @@
   "version": "1.0.0",
   "description": "A Node app that takes a youtube URL input and allows the user to convert and download the video as an MP3 or MP4",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "engines": {
+    "node": "20.x"
   },
-  "author": "arunnats",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "kishore",
   "license": "ISC",
   "dependencies": {
     "adm-zip": "^0.5.12",
+    "child_process": "^1.0.2",
     "ejs": "^3.1.10",
     "express": "^4.19.2",
     "express-session": "^1.18.0",
